@@ -1,0 +1,34 @@
+import pyranges as pr
+import pandas as pd
+
+# Example variant data
+data7 = {
+    "Chromosome": [7, 7, 7, 7, 7, 7],
+    "Start": [117120154, 117105836, 117307160, 117119513, 117144417, 117307124],
+    "End": [117120154, 117105838, 117307160, 117119513, 117144417, 117307126],
+    "Ref": ["-", "TTT", "T", "-", "ATG", "GAG"],
+    "Alt": ["T", "-", "-", "A", "ATG", "-"]
+}
+df7 = pd.DataFrame(data7)
+
+# Example annotations
+data = {
+    "CHROM": [7, 7, 7, 7, 7, 7],
+    "POS": [117120154, 117105835, 117307159, 117119513, 117144417, 117307123],
+    "ID": [".", ".", ".", ".", ".", "."],
+    "REF": ["A", "TTTT", "TT", "C", "G", "AGAG"],
+    "ALT": ["AT", "T", "T", "CA", "GATG", "A"]
+}
+df = pd.DataFrame(data)
+
+# Create PyRanges object for variants
+gr_variants = pr.PyRanges(df7)
+
+# Create PyRanges object for annotations (assuming you are using df7 as annotations for example)
+gr_annotations = pr.PyRanges(df7)
+
+# Intersect variants with annotations
+annotated_variants = gr_variants.join(gr_annotations)
+
+# Display the annotated variants
+print(annotated_variants)
