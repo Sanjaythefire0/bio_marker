@@ -47,7 +47,7 @@ The key steps are:
 **Create PyRanges objects**: PyRanges is used to store and manipulate genomic range data.
 **Join the variant and annotation datasets**: This operation finds overlapping regions between variants and annotations, annotating the variants with additional information.
 
-##Conclusion
+## Conclusion
 This repository helps perform key tasks in genomic analysis, such as exploratory data analysis and functional annotation, using the PyRanges library. These tasks are critical in understanding the genetic variants' potential functional impact and their relevance in different biological contexts.
 
 
