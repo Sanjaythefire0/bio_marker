@@ -1,6 +1,6 @@
 # Genomic Variant Annotation and EDA
 
-This repository contains code for performing Exploratory Data Analysis (EDA) on genomic variant data and functional annotation using PyRanges.
+This repository contains code for performing Exploratory Data Analysis (EDA) on genomic variant data and functional annotation using PyRanges!!.
 
 ## Overview
 
